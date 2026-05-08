@@ -6,7 +6,7 @@
     <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="expires" content="0" />
     <meta http-equiv="pragma" content="no-cache" />
-    <title>Rajas Bagga - Portfolio</title>
+    <title>Rajas Bagga - Blogs</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -893,38 +893,77 @@
           font-size: 1.2rem;
         }
       }
+    
+      /* Blog Styles */
+      .blogs-container {
+        padding: 8rem 0 4rem;
+        min-height: 100vh;
+      }
+      .blog-post {
+        background: var(--dark-light);
+        border-radius: 15px;
+        padding: 3rem;
+        margin-bottom: 3rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: var(--transition);
+      }
+      .blog-post:hover {
+        transform: translateY(-5px);
+        border-color: rgba(0, 212, 255, 0.2);
+        box-shadow: 0 10px 30px rgba(0, 212, 255, 0.1);
+      }
+      .blog-header {
+        margin-bottom: 2rem;
+      }
+      .blog-title {
+        font-size: 2.2rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+      .blog-meta {
+        color: var(--light-medium);
+        font-size: 0.9rem;
+        display: flex;
+        gap: 1.5rem;
+      }
+      .blog-content p {
+        margin-bottom: 1.5rem;
+        font-size: 1.1rem;
+        line-height: 1.8;
+      }
+      .blog-content h3 {
+        color: var(--light);
+        margin: 2rem 0 1rem;
+        font-size: 1.5rem;
+      }
+      .tag {
+        background: rgba(0, 212, 255, 0.1);
+        color: var(--primary);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        display: inline-block;
+        margin-right: 0.5rem;
+      }
     </style>
+
   </head>
   <body>
-    <!-- Loader -->
-    <div class="loader">
-      <div class="loader-content">
-        <h2>Rajas Bagga</h2>
-        <div class="progress-bar">
-          <div class="progress"></div>
-        </div>
-      </div>
-    </div>
-
     <!-- Custom Cursor -->
     <div class="cursor"></div>
-
-    <!-- Back to top button -->
-    <a href="#home" class="back-to-top">
-      <i class="fas fa-arrow-up"></i>
-    </a>
 
     <!-- Navigation -->
     <nav class="navbar">
       <div class="container">
         <h1 class="logo">Rajas Bagga</h1>
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
+          <li><a href="index.html#home">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
           <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="#contact">Connect</a></li>
+          <li><a href="index.html#contact">Connect</a></li>
         </ul>
         <div class="hamburger">
           <i class="fas fa-bars"></i>
@@ -932,463 +971,83 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <div id="particles-js"></div>
-      <div class="container hero-content">
-        <h1>Hey, I'm <span>Rajas Bagga</span></h1>
-        <p>
-          Crafting innovative solutions with Java, Python, C, Flutter, Machine
-          Learning, and Cybersecurity.
-        </p>
-        <a href="#projects" class="btn">Explore My Work</a>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Blogs Section -->
+    <section class="blogs-container">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content fade-up">
-          <p>
-            I'm a passionate programmer who loves turning ideas into reality.
-            With expertise in software development, AI, and cybersecurity, I
-            build solutions that are both innovative and secure.
-          </p>
-          <p>
-            My toolkit includes Java, Python, C, Flutter, and more, enabling me
-            to create everything from high-performance systems to intuitive
-            mobile apps. I'm always chasing the next big challenge.
-          </p>
-        </div>
-      </div>
-    </section>
+        <h2 class="section-title">My Blogs</h2>
+        
+        <!-- Blog 1: Ransomware -->
+        <article class="blog-post fade-up">
+          <div class="blog-header">
+            <h2 class="blog-title">The Anatomy of Ransomware: How it Works and How to Defend Against It</h2>
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> May 9, 2026</span>
+              <span><i class="fas fa-tags"></i> Cybersecurity, Malware</span>
+            </div>
+          </div>
+          <div class="blog-content">
+            <p>Ransomware is a type of malicious software designed to block access to a computer system or files until a sum of money is paid. Over the past decade, it has evolved from simple screen-lockers to sophisticated encryption tools that target large organizations and critical infrastructure.</p>
+            
+            <h3>How Ransomware Operates</h3>
+            <p>Most ransomware attacks begin with a phishing email containing a malicious attachment or a link. Once the user clicks, the malware is downloaded and begins executing. It typically communicates with a Command and Control (C2) server to receive an encryption key. After that, it scans the system for valuable files—documents, images, databases—and encrypts them using strong algorithms like AES or RSA.</p>
+            
+            <p>Modern ransomware often employs "double extortion," where attackers not only encrypt the data but also exfiltrate it, threatening to release sensitive information publicly if the ransom isn't paid.</p>
+            
+            <h3>Defense Strategies</h3>
+            <p>Defending against ransomware requires a multi-layered approach. Regular, offline backups are crucial—if your files are encrypted but you have a recent backup, you can simply restore the system without paying the ransom. Additionally, employing endpoint detection and response (EDR) solutions, keeping software updated to patch vulnerabilities, and conducting regular security training for employees can significantly reduce the risk of infection.</p>
+          </div>
+        </article>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-      <div class="container">
-        <h2 class="section-title">My Skills</h2>
-        <div class="skills-grid fade-up">
-          <div class="skill-card">
-            <i class="fa-brands fa-java"></i>
-            <h3>Java</h3>
-            <p>
-              Building scalable backend systems with robust architecture and
-              optimal performance.
-            </p>
-          </div>
-          <div class="skill-card">
-            <i class="fa-brands fa-python"></i>
-            <h3>Python</h3>
-            <p>
-              Developing AI solutions, data science applications, and automation
-              tools.
-            </p>
-          </div>
-          <div class="skill-card">
-            <i class="fa-solid fa-code"></i>
-            <h3>C</h3>
-            <p>
-              Creating efficient low-level systems and optimized
-              performance-critical applications.
-            </p>
-          </div>
-          <div class="skill-card">
-            <i class="fa-brands fa-flutter"></i>
-            <h3>Flutter</h3>
-            <p>
-              Crafting sleek, responsive cross-platform mobile applications with
-              beautiful UI.
-            </p>
-          </div>
-          <div class="skill-card">
-            <i class="fa-solid fa-brain"></i>
-            <h3>Machine Learning</h3>
-            <p>
-              Implementing advanced AI algorithms and predictive models for
-              data-driven solutions.
-            </p>
-          </div>
-          <div class="skill-card">
-            <i class="fas fa-shield-alt"></i>
-            <h3>Cybersecurity</h3>
-            <p>
-              Securing systems against vulnerabilities and practicing ethical
-              hacking techniques.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-      <div class="container">
-        <h2 class="section-title">My Projects</h2>
-        <div class="projects-grid fade-up">
-          <div class="project-card">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-comments"></i>
-              </div>
-              <div class="project-header-text">
-                <div class="project-number">Project 01</div>
-                <h3>BYOC (Bring Your Own Chat)</h3>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tech">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Backend</span>
-                <span class="tech-tag">Cryptography</span>
-              </div>
-              <p>
-                A project that allows people to host their own chat server and
-                remove their dependence from third party data stealer chat
-                applications.
-              </p>
-              <a href="https://github.com/rajas-bagga/BYOC" class="project-link"
-                >View Project <i class="fas fa-arrow-right"></i
-              ></a>
+        <!-- Blog 2: AI Classification & Regression -->
+        <article class="blog-post fade-up">
+          <div class="blog-header">
+            <h2 class="blog-title">Demystifying AI: Classification vs. Regression Explained</h2>
+            <div class="blog-meta">
+              <span><i class="far fa-calendar"></i> May 1, 2026</span>
+              <span><i class="fas fa-tags"></i> Machine Learning, AI</span>
             </div>
           </div>
-          <div class="project-card">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-brain"></i>
-              </div>
-              <div class="project-header-text">
-                <div class="project-number">Project 02</div>
-                <h3>AI Diabetes Screener</h3>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tech">
-                <span class="tech-tag">Machine Learning</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Web</span>
-              </div>
-              <p>
-                A machine learning application with responsive and interactive
-                web interface which allows users to screen their diabetes
-                status.
-              </p>
-              <a
-                href="https://github.com/rajas-bagga/diabetes-prediction"
-                class="project-link"
-                >View Project <i class="fas fa-arrow-right"></i
-              ></a>
-            </div>
+          <div class="blog-content">
+            <p>When diving into supervised machine learning, you'll quickly encounter two fundamental types of problems: classification and regression. While both involve training a model on historical data to make predictions, they serve entirely different purposes based on the kind of output you need.</p>
+            
+            <h3>Classification: Predicting Categories</h3>
+            <p>Classification is used when the output variable is categorical. The goal is to map input data to a specific class or category. For example, filtering emails into "Spam" or "Not Spam," diagnosing a medical image as "Benign" or "Malignant," or determining the species of a flower based on its petal dimensions.</p>
+            <p>Common classification algorithms include Logistic Regression, Support Vector Machines (SVM), and Random Forests. The model output is typically a probability that the input belongs to a certain class.</p>
+            
+            <h3>Regression: Predicting Continuous Values</h3>
+            <p>Regression, on the other hand, is used when the output variable is a real, continuous value. Instead of sorting data into buckets, regression models try to predict a quantity. Examples include predicting the price of a house based on its square footage and location, forecasting next month's sales, or estimating the temperature for tomorrow.</p>
+            <p>Linear Regression, Ridge Regression, and Gradient Boosting Regressors are popular choices here. The performance is usually measured by how close the predicted values are to the actual values (e.g., Mean Squared Error).</p>
+            
+            <p>In short, if your question is "Which one?" or "Is it X or Y?", you're looking at a classification problem. If your question is "How much?" or "How many?", you need regression.</p>
           </div>
-          <div class="project-card">
-            <div class="project-header">
-              <div class="project-icon">
-                <i class="fas fa-shield-alt"></i>
-              </div>
-              <div class="project-header-text">
-                <div class="project-number">Project 03</div>
-                <h3>Juggernaut</h3>
-              </div>
-            </div>
-            <div class="project-content">
-              <div class="project-tech">
-                <span class="tech-tag">Golang</span>
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Security</span>
-              </div>
-              <p>
-                A cybersecurity tool for web application stress testing which
-                can overwhelm your application with GET requests. Written in
-                golang and python.
-              </p>
-              <a
-                href="https://github.com/rajas-bagga/Juggernaut"
-                class="project-link"
-                >View Project <i class="fas fa-arrow-right"></i
-              ></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2 class="section-title">Let's Connect</h2>
-        <div class="contact-content fade-up">
-          <p>
-            Reach out to collaborate, discuss projects, or just chat about tech!
-          </p>
-          <div class="social-links">
-            <a
-              href="https://github.com/rajas-bagga"
-              class="social-link"
-              target="_blank"
-            >
-              <i class="fab fa-github"></i> GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/rajas-bagga/"
-              class="social-link"
-              target="_blank"
-            >
-              <i class="fab fa-linkedin"></i> LinkedIn
-            </a>
-            <a href="mailto:rajasbagga108@gmail.com" class="social-link">
-              <i class="fas fa-envelope"></i> Email
-            </a>
-            <a href="" class="social-link" target="_blank">
-              <i class="fab fa-twitter"></i> Twitter
-            </a>
-          </div>
-        </div>
+        </article>
       </div>
     </section>
 
     <!-- Footer -->
     <footer>
-      <div class="container">
-        <p>© 2025 Rajas Bagga. Built with passion and creativity.</p>
-      </div>
+      <p>&copy; 2026 Rajas Bagga. All rights reserved.</p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script>
-      // Enhanced Particle.js Configuration
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 100, density: { enable: true, value_area: 800 } },
-          color: { value: "#00d4ff" },
-          shape: {
-            type: "circle",
-            stroke: { width: 0, color: "#000000" },
-            polygon: { nb_sides: 5 },
-          },
-          opacity: {
-            value: 0.5,
-            random: true,
-            anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
-          },
-          size: {
-            value: 3,
-            random: true,
-            anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
-          },
-          line_linked: {
-            enable: true,
-            distance: 150,
-            color: "#00d4ff",
-            opacity: 0.3,
-            width: 1,
-          },
-          move: {
-            enable: true,
-            speed: 2,
-            direction: "none",
-            random: true,
-            straight: false,
-            out_mode: "out",
-            bounce: false,
-            attract: { enable: false, rotateX: 600, rotateY: 1200 },
-          },
-        },
-        interactivity: {
-          detect_on: "canvas",
-          events: {
-            onhover: { enable: true, mode: "grab" },
-            onclick: { enable: true, mode: "push" },
-            resize: true,
-          },
-          modes: {
-            grab: { distance: 180, line_linked: { opacity: 0.8 } },
-            bubble: {
-              distance: 400,
-              size: 40,
-              duration: 2,
-              opacity: 8,
-              speed: 3,
-            },
-            repulse: { distance: 200, duration: 0.4 },
-            push: { particles_nb: 4 },
-            remove: { particles_nb: 2 },
-          },
-        },
-        retina_detect: true,
-      });
-
-      // Document Ready Function
-      document.addEventListener("DOMContentLoaded", () => {
-        // Hide loader after page loads
-        setTimeout(() => {
-          document.querySelector(".loader").classList.add("fade-out");
-        }, 2000);
-
-        // Hamburger Menu Toggle
-        const hamburger = document.querySelector(".hamburger");
-        const navLinks = document.querySelector(".nav-links");
-
-        hamburger.addEventListener("click", () => {
-          navLinks.classList.toggle("active");
-        });
-
-        // Smooth Scrolling
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-          anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute("href"));
-            if (target) {
-              window.scrollTo({
-                top: target.offsetTop - 70,
-                behavior: "smooth",
-              });
-              // Close mobile menu if open
-              navLinks.classList.remove("active");
-            }
-          });
-        });
-
-        // Scroll Animations
-        const fadeElements = document.querySelectorAll(".fade-up");
-
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                entry.target.classList.add("animate");
-              }
-            });
-          },
-          { threshold: 0.1 }
-        );
-
-        fadeElements.forEach((element) => {
-          observer.observe(element);
-        });
-
-        // Navbar scroll effect
-        window.addEventListener("scroll", () => {
-          const navbar = document.querySelector(".navbar");
-          if (window.scrollY > 50) {
-            navbar.classList.add("scrolled");
-          } else {
-            navbar.classList.remove("scrolled");
-          }
-
-          // Back to top button visibility
-          const backToTop = document.querySelector(".back-to-top");
-          if (window.scrollY > 300) {
-            backToTop.classList.add("active");
-          } else {
-            backToTop.classList.remove("active");
-          }
-        });
-
-        // Custom cursor effect
-        const cursor = document.querySelector(".cursor");
-        const links = document.querySelectorAll("a, button, .hamburger");
-
-        // Only enable custom cursor on non-touch devices
-        if (!("ontouchstart" in window)) {
-          cursor.style.display = "block";
-
+      // Cursor effect
+      const cursor = document.querySelector(".cursor");
+      if (cursor) {
           document.addEventListener("mousemove", (e) => {
             cursor.style.left = e.clientX + "px";
             cursor.style.top = e.clientY + "px";
           });
-
-          links.forEach((link) => {
-            link.addEventListener("mouseenter", () => {
-              cursor.classList.add("grow");
-            });
-
-            link.addEventListener("mouseleave", () => {
-              cursor.classList.remove("grow");
-            });
-          });
-        }
-
-        // Random tech badges color variation
-        const techTags = document.querySelectorAll(".tech-tag");
-        const colors = [
-          "rgba(0, 212, 255, 0.1)",
-          "rgba(125, 95, 255, 0.1)",
-          "rgba(255, 105, 180, 0.1)",
-        ];
-        const textColors = ["#00d4ff", "#7d5fff", "#ff69b4"];
-
-        techTags.forEach((tag) => {
-          const randomIndex = Math.floor(Math.random() * colors.length);
-          tag.style.background = colors[randomIndex];
-          tag.style.color = textColors[randomIndex];
-        });
-
-        // Project card image hover effect
-        const projectImages = document.querySelectorAll(".project-image");
-
-        projectImages.forEach((img, index) => {
-          // Create different geometric patterns for each project
-          const patterns = [
-            "radial-gradient(circle at 30% 50%, rgba(0, 212, 255, 0.4) 0%, transparent 50%)",
-            "linear-gradient(135deg, rgba(125, 95, 255, 0.4) 0%, transparent 50%)",
-            "repeating-linear-gradient(45deg, rgba(255, 105, 180, 0.1) 0px, rgba(255, 105, 180, 0.1) 2px, transparent 2px, transparent 10px)",
-          ];
-
-          img.style.background = `var(--dark-medium) ${
-            patterns[index % patterns.length]
-          }`;
-        });
-
-        // GSAP animations for extra flair
-        gsap.from(".logo", {
-          duration: 1,
-          y: -50,
-          opacity: 0,
-          ease: "power3.out",
-          delay: 2.2,
-        });
-
-        gsap.from(".nav-links li", {
-          duration: 1,
-          y: -50,
-          opacity: 0,
-          stagger: 0.1,
-          ease: "power3.out",
-          delay: 2.3,
-        });
-
-        // Add scroll reveal animations
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.utils.toArray(".skill-card").forEach((card, i) => {
-          gsap.from(card, {
-            scrollTrigger: {
-              trigger: card,
-              start: "top bottom-=100",
-              toggleActions: "play none none none",
-            },
-            y: 50,
-            opacity: 0,
-            duration: 0.8,
-            delay: i * 0.1,
-          });
-        });
-
-        gsap.utils.toArray(".project-card").forEach((card, i) => {
-          gsap.from(card, {
-            scrollTrigger: {
-              trigger: card,
-              start: "top bottom-=100",
-              toggleActions: "play none none none",
-            },
-            y: 50,
-            opacity: 0,
-            duration: 0.8,
-            delay: i * 0.1,
-          });
-        });
+      }
+      
+      // Simple fade-up animation
+      document.addEventListener("DOMContentLoaded", () => {
+          const fadeUps = document.querySelectorAll(".fade-up");
+          fadeUps.forEach(el => el.classList.add("animate"));
+          if(cursor) cursor.style.display = 'block';
       });
     </script>
   </body>
